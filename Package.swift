@@ -5,20 +5,19 @@ import PackageDescription
 
 let package = Package(
     name: "QRCodeScanner",
+    platforms: [.iOS(.v16), .macOS(.v13)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "QRCodeScanner",
-            targets: ["QRCodeScanner"]
+            targets: ["QRCodeScanner"] // This MUST match the name in targets below
         ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "QRCodeScanner"
+            name: "QRCodeScanner",
+            dependencies: [],
+            path: "Sources/QRCodeScanner" // Optional: helps SPM find your files
         ),
-
     ],
     swiftLanguageModes: [.v6]
 )
