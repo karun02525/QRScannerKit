@@ -8,7 +8,7 @@
 import SwiftUI
 import QRCodeScanner
 
-struct ContentView: View {
+struct CustomView: View {
     @State private var showingScanner = false
     // 1. Create the state object
     @StateObject private var scannerController = ScannerController()
@@ -70,5 +70,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CustomView()
 }
+
+
